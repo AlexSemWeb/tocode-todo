@@ -2,10 +2,33 @@ import React from 'react'
 
 import { Container } from '../../layouts'
 
+const Form = () => {
+  const [title, setTitle] = React.useState('')
+
+  const handleSubmit = () => {
+    event.preventDefault()
+
+    // reset
+    setTitle('')
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type='text'
+        required
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <button type='submit'>Submit</button>
+    </form>
+  )
+}
+
 const HomePage = () => {
   return (
     <Container>
-      <h1 className='ui-title-1'>Home Page</h1>
+      <Form />
     </Container>
   )
 }
