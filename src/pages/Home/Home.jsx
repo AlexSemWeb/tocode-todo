@@ -32,6 +32,16 @@ const Form = ({ onSubmit }) => {
   )
 }
 
+const List = ({ items }) => {
+  return (
+    <>
+      {items && items.length > 0
+        ? items.map((item) => <p key={item.id}>{item.title}</p>)
+        : 'Items not found'}
+    </>
+  )
+}
+
 const HomePage = () => {
   const [items, setItems] = React.useState([])
 
@@ -45,6 +55,7 @@ const HomePage = () => {
   return (
     <Container>
       <Form onSubmit={handleSubmit} />
+      <List items={items} />
     </Container>
   )
 }
