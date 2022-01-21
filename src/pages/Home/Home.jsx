@@ -1,36 +1,8 @@
-import React, { useEffect } from 'react'
-import { v4 as fakeId } from 'uuid'
+import React from 'react'
+
+import { Form } from '../../components/Todo'
 
 import { Container } from '../../layouts'
-
-const Form = ({ onSubmit }) => {
-  const [title, setTitle] = React.useState('')
-
-  const handleSubmit = () => {
-    event.preventDefault()
-
-    const item = {
-      id: fakeId(),
-      title: title,
-    }
-
-    onSubmit(item)
-    // reset
-    setTitle('')
-  }
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type='text'
-        required
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <button type='submit'>Submit</button>
-    </form>
-  )
-}
 
 const List = ({ items }) => {
   return (
