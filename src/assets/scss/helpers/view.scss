@@ -2,3 +2,18 @@
   max-width: 720px;
   margin: 0 auto;
 }
+
+.view-wrapper {
+  display: flex;
+}
+
+.view-sidebar {
+  width: 20%;
+  &__content {
+    height: 100%;
+  }
+}
+
+.view-content {
+  width: 80%;
+}
