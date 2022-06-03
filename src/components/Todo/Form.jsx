@@ -1,9 +1,9 @@
 import React from 'react'
 import { v4 as fakeId } from 'uuid'
 
-import Tags from './Tags'
-
 import tagsSeeder from '../../seeders/tags.json'
+
+import Tags from './Tags'
 
 const Form = ({ onSubmit }) => {
   const [title, setTitle] = React.useState('')

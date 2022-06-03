@@ -1,12 +1,17 @@
 import React from 'react'
 
-import { Form, List, Tags } from '../../components/Todo'
+// hooks
+import useFilterList from '../../hooks/useFilterList'
 
-import { Container } from '../../layouts'
-
+// seeders
 import todos from '../../seeders/todos.json'
 import tagsSeeder from '../../seeders/tags.json'
-import useFilterList from '../../hooks/useFilterList'
+
+// layouts
+import { Container } from '../../layouts'
+
+//components
+import { Form, List, Tags } from '../../components/Todo'
 
 const HomePage = () => {
   // data from localStorage
@@ -67,7 +72,7 @@ const HomePage = () => {
     <Container>
       <div className='view-wrapper'>
         <div className='view-sidebar'>
-          <Tags items={tags} onItemClick={clickSidebarTag} isVeritcal />
+          <Tags items={tags} onItemClick={clickSidebarTag} isVertical />
         </div>
         <div className='view-content'>
           <Form onSubmit={handleSubmit} />

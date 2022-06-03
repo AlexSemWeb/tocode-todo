@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 import Tags from './Tags'
 
@@ -34,6 +35,12 @@ const List = ({ items, onChangeItem, onRemoveItem }) => {
         : 'Items not found'}
     </div>
   )
+}
+
+List.propTypes = {
+  items: propTypes.array.isRequired,
+  onChangeItem: propTypes.func.isRequired,
+  onRemoveItem: propTypes.func.isRequired,
 }
 
 export default List
